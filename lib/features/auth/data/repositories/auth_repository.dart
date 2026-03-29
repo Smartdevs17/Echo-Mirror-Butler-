@@ -78,7 +78,8 @@ class AuthRepository {
       final prefs = await SharedPreferences.getInstance();
       await prefs.remove('user_email');
       await prefs.remove('user_id');
-      debugPrint('[AuthRepository] Cleared saved user info');
+
+      debugPrint('[AuthRepository] signOut complete');
     } catch (e) {
       debugPrint('[AuthRepository] signOut error -> $e');
       throw Exception('Sign out failed: ${e.toString()}');
